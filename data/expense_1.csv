@@ -1,0 +1,11 @@
+date,category,merchant,description,amount
+2025-02-01,Food,KFC,Fried chicken meal,s
+2025-02-02,Transport,Ola,Airport drop,22.00
+2025-02-03,Shopping,Amazon,USB cable,9.99
+2025-02-04,Bills,Water Department,Water bill payment,30.75
+2025-02-05,Food,Subway,Sandwich lunch,7.80
+2025-02-06,Transport,Uber,Evening commute,14.40
+2025-02-07,Entertainment,Spotify,Music subscription,9.99
+2025-02-08,Shopping,Decathlon,Gym gloves,19.50
+2025-02-09,Health,Pharmacy,Vitamins purchase,16.20
+2025-02-10,Food,Starbucks,Latte coffee,5.90
