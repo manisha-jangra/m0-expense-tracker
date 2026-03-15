@@ -18,6 +18,41 @@ This application performs the following steps:
 
 4️⃣ Run analytics queries from the CLI
 
+---
+
+#   Architecture Diagram
+
+```
+                +-------------------+
+                |     CSV Files     |
+                |  (data folder)    |
+                +---------+---------+
+                          |
+                          |
+                          v
+                +-------------------+
+                |   Python CLI App  |
+                |                   |
+                |  - CSV Ingestion  |
+                |  - Data Validation|
+                |  - Analytics      |
+                +---------+---------+
+                          |
+                          |
+                          v
+                +-------------------+
+                |   PostgreSQL DB   |
+                |    (records)      |
+                +---------+---------+
+                          |
+                          |
+                          v
+                +-------------------+
+                |   CLI Analytics   |
+                |   Output Results  |
+                +-------------------+
+```
+
 **Data Flow**
 
 ```
