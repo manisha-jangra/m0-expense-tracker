@@ -1,4 +1,4 @@
-# 💰 Expense Tracker CLI Application
+# Expense Tracker CLI Application
 
 A **Command Line Interface (CLI) based Expense Tracker** that ingests CSV files, stores the data in a PostgreSQL database, and runs analytics queries on the stored expense data.
 
@@ -6,13 +6,16 @@ The application follows a **modular Python architecture**, uses **environment va
 
 ---
 
-# 📌 Project Overview
+#  Project Overview
 
 This application performs the following steps:
 
 1️⃣ Read expense records from CSV files
+
 2️⃣ Validate and process records using Python
+
 3️⃣ Store data in a PostgreSQL database
+
 4️⃣ Run analytics queries from the CLI
 
 **Data Flow**
@@ -23,14 +26,13 @@ CSV Files → Python Processing → PostgreSQL → Analytics Output
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```
 expense_tracker
 │
 ├── main.py              # CLI entry point
-├── db.py                # PostgreSQL connection
-├── ingest.py            # CSV ingestion logic
+├── db.py                # PostgreSQL connection + CSV ingestion logic
 ├── analytics.py         # SQL analytics queries
 │
 ├── data/                # CSV files directory
@@ -38,24 +40,24 @@ expense_tracker
 │   ├── expense_2.csv
 │
 ├── .env                 # Environment variables
-├── requirements.txt
-└── README.md
+├── requirements.txt     # list of module & libraries
+└── README.md            # documentation of project
 ```
 
 ---
 
-# ⚙️ Prerequisites
+#  Prerequisites
 
 Ensure the following tools are installed:
 
-* 🐍 Python 3.9+
-* 🐘 PostgreSQL
-* 🐳 Docker (optional)
-* 🌿 Git
+*  Python 3.9+
+*  PostgreSQL
+*  Docker (optional)
+*  Git
 
 ---
 
-# 📦 Install Dependencies
+#  Install Dependencies
 
 Install all required Python packages using:
 
@@ -65,7 +67,7 @@ pip install -r requirements.txt
 
 ---
 
-# 📄 requirements.txt
+#  requirements.txt
 
 ```
 psycopg2-binary
@@ -75,7 +77,7 @@ pydantic
 
 ---
 
-# 🔐 Environment Variables
+#  Environment Variables
 
 Create a `.env` file in the project root directory.
 
@@ -91,7 +93,7 @@ These variables are used by the application to connect to PostgreSQL.
 
 ---
 
-# ▶️ Running the Application
+#  Running the Application
 
 ### Ingest CSV Files
 
@@ -125,7 +127,7 @@ Average Expense:
 
 ---
 
-# 📊 CSV File Format
+#  CSV File Format
 
 CSV files must follow this structure:
 
@@ -138,7 +140,7 @@ date,merchant,category,amount
 
 ---
 
-# 🐳 Running with Docker
+#  Running with Docker
 
 Start the entire system using Docker:
 
@@ -153,22 +155,21 @@ This will start:
 
 ---
 
-# 🌿 Git Workflow
+#  Git Workflow
 
 The repository follows a **feature branch workflow**.
 
 Example branches:
 
 ```
-feature/database-schema
-feature/csv-ingestion
-feature/analytics
+feature/db-insert
+feature/csv-reader
 ```
 
 Each feature is developed in a separate branch and merged into `main` using a pull request.
 
 ---
 
-# 👩‍💻 Author
+#  Author
 
 Manisha Jangra
