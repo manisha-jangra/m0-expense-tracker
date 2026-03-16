@@ -113,7 +113,7 @@ venv\\Scripts\\activate
 ### On Mac / Linux
 
 ```
-source venv/bin/activate
+source venv/Scripts/activate
 ```
 
 Once activated, your terminal will show:
