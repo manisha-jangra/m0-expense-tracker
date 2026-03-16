@@ -26,7 +26,11 @@ def insert_csv_records(records):
     VALUES (%s, %s, %s, %s, %s)
     """
     for r in records:
-        cursor.execute(query, (r.date, r.category, r.merchant, r.description, r.amount))
+        cursor.execute(query, (r.date,
+                               r.category, 
+                               r.merchant,
+                               r.description,
+                               r.amount))
 
     # print("Data inserted successfully")
     conn.commit()

@@ -11,12 +11,14 @@ def main():
         print("Running CSV ingestion...")
         folder_path = "data"
         
+        #this will return list of files in data folder
         list_files = os.listdir(folder_path)
         
         for file in list_files:
             
             if file.endswith(".csv"):
                 
+                #for taking full file path
                 file_path = os.path.join(folder_path, file)
 
                 print(f"Processing {file}...")
