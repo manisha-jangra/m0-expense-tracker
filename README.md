@@ -6,28 +6,24 @@ The application follows a **modular Python architecture**, uses **environment va
 
 ---
 
-#  Project Overview
+# Project Overview
 
 This application performs the following steps:
 
-1️⃣ Read expense records from CSV files
-
-2️⃣ Validate and process records using Python
-
-3️⃣ Store data in a PostgreSQL database
-
-4️⃣ Run analytics queries from the CLI
+1. Read expense records from CSV files
+2. Validate and process records using Python
+3. Store data in a PostgreSQL database
+4. Run analytics queries from the CLI
 
 ---
 
-#   Architecture Diagram
+# Architecture Diagram
 
 ```
                 +-------------------+
                 |     CSV Files     |
                 |  (data folder)    |
                 +---------+---------+
-                          |
                           |
                           v
                 +-------------------+
@@ -38,13 +34,11 @@ This application performs the following steps:
                 |  - Analytics      |
                 +---------+---------+
                           |
-                          |
                           v
                 +-------------------+
                 |   PostgreSQL DB   |
-                |    (records)      |
+                |     (records)     |
                 +---------+---------+
-                          |
                           |
                           v
                 +-------------------+
@@ -61,7 +55,7 @@ CSV Files → Python Processing → PostgreSQL → Analytics Output
 
 ---
 
-#  Project Structure
+# Project Structure
 
 ```
 expense_tracker
@@ -75,24 +69,64 @@ expense_tracker
 │   ├── expense_2.csv
 │
 ├── .env                 # Environment variables
-├── requirements.txt     # list of module & libraries
+├── requirements.txt     # list of modules & libraries
 └── README.md            # documentation of project
 ```
 
 ---
 
-#  Prerequisites
+# Prerequisites
 
 Ensure the following tools are installed:
 
-*  Python 3.9+
-*  PostgreSQL
-*  Docker (optional)
-*  Git
+* Python 3.9+
+* PostgreSQL
+* Docker (optional)
+* Git
 
 ---
 
-#  Install Dependencies
+# Virtual Environment Setup
+
+It is recommended to use a **Python Virtual Environment** to isolate project dependencies.
+
+## Create Virtual Environment
+
+Run the following command in the project root folder:
+
+```
+python -m venv venv
+```
+
+This will create a folder named `venv` that contains a separate Python environment for this project.
+
+---
+
+## Activate Virtual Environment
+
+### On Windows
+
+```
+venv\\Scripts\\activate
+```
+
+### On Mac / Linux
+
+```
+source venv/bin/activate
+```
+
+Once activated, your terminal will show:
+
+```
+(venv)
+```
+
+This means the virtual environment is active.
+
+---
+
+# Install Dependencies
 
 Install all required Python packages using:
 
@@ -102,7 +136,7 @@ pip install -r requirements.txt
 
 ---
 
-#  requirements.txt
+# requirements.txt
 
 ```
 psycopg2-binary
@@ -112,7 +146,7 @@ pydantic
 
 ---
 
-#  Environment Variables
+# Environment Variables
 
 Create a `.env` file in the project root directory.
 
@@ -128,9 +162,9 @@ These variables are used by the application to connect to PostgreSQL.
 
 ---
 
-#  Running the Application
+# Running the Application
 
-### Ingest CSV Files
+## Ingest CSV Files
 
 Load all CSV files from the `data` directory into the database.
 
@@ -140,7 +174,7 @@ python main.py ingest
 
 ---
 
-### Run Analytics
+## Run Analytics
 
 Execute analytics queries on stored expense data.
 
@@ -162,7 +196,7 @@ Average Expense:
 
 ---
 
-#  CSV File Format
+# CSV File Format
 
 CSV files must follow this structure:
 
@@ -175,7 +209,7 @@ date,merchant,category,amount
 
 ---
 
-#  Running with Docker
+# Running with Docker
 
 Start the entire system using Docker:
 
@@ -190,7 +224,7 @@ This will start:
 
 ---
 
-#  Git Workflow
+# Git Workflow
 
 The repository follows a **feature branch workflow**.
 
@@ -205,6 +239,6 @@ Each feature is developed in a separate branch and merged into `main` using a pu
 
 ---
 
-#  Author
+# Author
 
 Manisha Jangra
